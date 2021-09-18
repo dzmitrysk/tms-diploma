@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    <!--
+    Connecting fonts
+    -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <title>Graduate work</title>
+</head>
+
+<body>
+  <header>
+    <div class="container"></div>
+  </header>
+
+  <section class="main-block">
+    <div class="container">
+
+      <ul class="main-block__navigation-list">
+        <p>Menu:</p>
+        <a href="/admin/">
+          <li class="navigation-list__item">Login to Django administrative area</li>
+        </a>
+
+        <a href="/api/employees">
+          <li class="navigation-list__item">Django REST API for Employees</li>
+        </a>
+
+        <a href="/api/equipments">
+          <li class="navigation-list__item">Django REST API for Equipments</li>
+        </a>
+
+      </ul>
+    </div>
+
+      <div class="container">
+        <div class="API-rules">
+          <div class="API-rules__header">API rules:</div>
+
+          <div class="API-rules__rule">
+            To receive information about employees send GET request:<br><br>
+            <span class="code-block">
+              GET 'http://127.0.0.1:8000/api/employees' <br> <br>
+            </span>
+            Response returns JSON with description of all employees.
+          </div>
+
+          <div class="API-rules__rule">
+            To receive information about equipments send GET request:<br><br>
+            <span class="code-block">
+              GET 'http://127.0.0.1:8000/api/equipments' <br> <br>
+            </span>
+            Response returns JSON with description of all equipments.
+          </div>
+
+          <div class="API-rules__rule">
+            To give an equipment to employee send POST request:<br><br>
+            <span class="code-block">
+              POST 'http://127.0.0.1:8000/api/give/&ltequipment_id&gt' <br>
+              -- form 'employee_id=&ltemployee_id&gt'
+            </span><br><br>
+            Response returns JSON with description of equipment was given.
+          </div>
+
+        </div>
+      </div>
+
+  </section>
+</body>
+</html>
+
+
+

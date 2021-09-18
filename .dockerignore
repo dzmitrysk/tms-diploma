@@ -1,0 +1,14 @@
+*.pyc
+*.pyo
+*.mo
+*.db
+*.sqlite
+.cache
+.gitignore
+.idea/
+.DS_Store
+.git/
+.vagrant/
+__pycache__
+venv
+Dockerfile
