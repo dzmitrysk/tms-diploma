@@ -3,7 +3,6 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-import employees.models
 from employees.models import Employee, Equipment
 from employees.serializers import EmployeeSerializer, EquipmentSerializer
 
