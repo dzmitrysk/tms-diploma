@@ -38,14 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    # 'corsheaders',
     'employees',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -73,12 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tms_diploma.wsgi.application'
-
-
-# Allow requests from any domain
-# https://github.com/adamchainz/django-cors-headers
-
-CORS_ALLOW_ALL_ORIGINS = True
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
